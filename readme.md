@@ -17,4 +17,4 @@ WEB
 
 ![Gif de Amostra](https://github.com/csinho/mACS_Projeto/blob/master/macs.gif)
 
-<img src="https://github.com/csinho/mACS_Projeto/blob/master/home.jpeg" width="400" height="790"> <img src="https://github.com/csinho/mACS_Projeto/blob/master/formularios.jpeg" width="400" height="790">
+<img src="https://github.com/csinho/mACS_Projeto/blob/master/home.jpeg" width="400" height="790"> <img src="https://github.com/csinho/mACS_Projeto/blob/master/formularios.jpeg" width="400" height="740">
