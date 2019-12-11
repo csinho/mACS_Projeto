@@ -15,6 +15,6 @@ WEB
 	código_fonte ( fonte limpa de dados)
 
 
-![Gif de Amostra](https://github.com/csinho/mACS_Projeto/blob/master/macs.gif)
+![Gif de Amostra](https://github.com/csinho/mACS_Projeto/blob/master/macs.gif width="400" height="740")
 
-<img src="https://github.com/csinho/mACS_Projeto/blob/master/home.jpeg" width="400" height="790"> <img src="https://github.com/csinho/mACS_Projeto/blob/master/formularios.jpeg" width="400" height="740">
+<img src="https://github.com/csinho/mACS_Projeto/blob/master/formularios.jpeg" width="400" height="740"> <img src="https://github.com/csinho/mACS_Projeto/blob/master/home.jpeg" width="400" height="790"> 
