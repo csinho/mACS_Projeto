@@ -1,0 +1,93 @@
+<!-- form filter -->
+<div class="panel panel-default">
+    <div class="panel-heading" style="font-size: 20px;">Filtros por campo</div>
+    <div class="panel-body">
+        <form name="filtroForm" ng-submit="ctrl.addFilter()">
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label>Campo: </label>
+                    <select ng-change="ctrl.fieldChanged()" ng-model="ctrl.filter.field" class="form-control" ng-options="field as field.description for field in ctrl.fields"
+                        required="required">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label>Operador: </label>
+                    <select ng-change="ctrl.operatorChanged()" ng-model="ctrl.filter.operator" class="form-control" ng-options="operator as operator.value for operator in ctrl.operators"
+                        required="required">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3" ng-switch on="ctrl.fieldDataType">
+                    <label ng-if="ctrl.fieldDataType">Valor: </label>
+                    
+                    <input ng-switch-when="number" min="0" type="number" ng-model="ctrl.filter.value" class="form-control" required="required">
+
+                    <!--<input ng-switch-when="date" type="date" ng-model="ctrl.filter.value" class="form-control" required="required">-->
+                    <div ng-switch-when="date">
+                        <p class="input-group">
+                        <input type="text" 
+                        alt-input-formats="altInputFormats" 
+                        placeholder="dd/mm/aaaa",                                                                                       
+                        class="form-control validate-date" 
+                        ng-required="true"
+                        ng-pattern="/^(0[1-9]|[12][0-9]|3[01])\/([1-9]|0[1-9]|1[012])\/(20\d{2})$/"                                                                                      
+                        uib-datepicker-popup="{{format}}" 
+                        ng-model="ctrl.filter.value" 
+                        is-open="popupFilterValueDateOpen.opened" 
+                        datepicker-options="dateOptions"                                            
+                        close-text="Fechar" 
+                        current-text="Hoje" 
+                        clear-text="Limpar"                                            
+                            />                                            
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="openFilterValueDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>                   
+
+                    <input ng-switch-when="text" type="text" ng-model="ctrl.filter.value" class="form-control" required="required">
+
+                    <!--<input ng-switch-when="month" type="month" ng-model="ctrl.filter.value" class="form-control" required="required">-->
+
+                    <div ng-switch-when="month">
+                        <p class="input-group">
+                            <input type="text" 
+                            alt-input-formats="altInputFormats" 
+                            placeholder="mm/aaaa",                                                                                       
+                            class="form-control validate-date" 
+                            ng-required="true"
+                            ng-pattern="/^([1-9]|0[1-9]|1[012])\/(20\d{2})$/"                                                                                      
+                            uib-datepicker-popup="{{formatMonth}}" 
+                            ng-model="ctrl.filter.value" 
+                            is-open="popupFilterValueMonthOpen.opened"                       
+                            datepicker-options="{minMode: 'month'}" 
+                            datepicker-mode="'month'"                                           
+                            close-text="Fechar" 
+                            current-text="Hoje" 
+                            clear-text="Limpar"                                            
+                            />                                            
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="openFilterValueMonth()"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>   
+
+                    <input ng-switch-when="tel" type="tel" ng-model="ctrl.filter.value" class="form-control" required="required">
+
+                    <select ng-switch-when="boolean" ng-model="ctrl.filter.value" class="form-control" ng-options="option as option.desc for option in [{desc:'Sim',value:'true'}, {desc:'Não',value:'false'}]"
+                        required="required">
+                        <option value="">Selecione</option>								
+                    </select>
+
+                    <select ng-switch-when="domaindata" ng-model="ctrl.filter.value" class="form-control" ng-options="option as option.desc for option in ctrl.fieldDomainOptions"
+                        required="required">
+                        <option value="">Selecione</option>								
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button ng-if="ctrl.filter.value" class="btn btn-primary" style="margin-top: 24px">Adicionar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

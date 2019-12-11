@@ -1,0 +1,261 @@
+#{extends 'main.html' /} #{set title:'Cadastro de Usuarios' /}
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/services/unidadessaude.js'}" type="text/javascript" charset="UTF-8"></script>
+<script src="@{'/public/javascripts/controllers/unidadessaude.controller.js'}" type="text/javascript" charset="UTF-8"></script>
+<script src="@{'/public/javascripts/controllers/usuarios.controller.js'}" type="text/javascript" charset="UTF-8"></script>
+<script src="@{'/public/javascripts/services/usuarioService.js'}" type="text/javascript" charset="UTF-8"></script>
+#{/set}
+
+<div ng-controller="UsuariosController as usuCtrl">
+  <div class="container" style="width: auto !important">
+    <div id="wrapper" style="padding: 20px">
+      <div class="body-content row" style="margin-bottom: 10px;">
+        <div class="panel-heading">
+          <button style="margin-top: -7px" ng-click="usuCtrl.adicionarUsuario()" type="button"
+            class="btn btn-primary pull-left" ng-show="!usuCtrl.estaEditandoAdicionando()">Adicionar</button>
+        </div>
+      </div>
+
+      <div class="panel panel-default" ng-show="usuCtrl.estaEditandoAdicionando()" ng-cloak>
+        <div class="panel-heading" style="font-size: 20px;">Cadastro</div>
+        <div class="panel-body" style="margin-top: 35px;">
+          <div class="col-lg-12">
+                        
+            <form role="form">
+              <div class="row form-group">
+
+                <div class="form-group row">
+                  <label for="usuarioNome" class="col-sm-2 control-label">Nome: </label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control input-md" id="usuarioNome" ng-model="usuCtrl.usuario.nome"
+                      required>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="login" class="col-sm-2 control-label">Login: </label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control input-md" ng-blur="usuCtrl.procurarUsuarioPorLogin()"
+                      id="numeroUsuario" ng-model="usuCtrl.usuario.login" title="Login do Usuário"
+                      ng-disabled="usuCtrl.usuario.id" required>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="usuarioEmail" class="col-sm-2 control-label">Email: </label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control input-md" id="usuarioEmail" ng-model="usuCtrl.usuario.email"
+                      ng-disabled="usuCtrl.usuario.id" required>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="usuarioPerfil" class="col-sm-2 control-label">Perfil: </label>
+                  <div class="col-sm-4">
+                    <select id="usuarioPerfil" class="input-md form-control" ng-model="usuCtrl.usuario.perfis"
+                      ng-options="perfil.codigo as perfil.descricao for perfil in usuCtrl.perfils"
+                      ng-change="usuCtrl.changingPerfil()" required>
+                      <option value="">Selecione</option>
+                    </select>
+                  </div>
+                </div>
+                
+                
+                <div class="form-group row" ng-if="usuCtrl.showingTipo()">
+                  <label for="usuarioTipo" class="col-sm-2 control-label">Tipo: </label>
+                  <div class="col-sm-4">
+                     <select id="usuarioTipo" class="input-md form-control" ng-model="usuCtrl.usuario.userData.tipo"
+                      ng-options="userType as userType.description for userType in usuCtrl.userTypes"
+                      ng-change="usuCtrl.changingUsuarioTipo()"
+                      required>
+                      <option value="">Selecione</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="form-group row" ng-if="usuCtrl.showingCNS()">
+                  <label for="cns" class="col-sm-2 control-label">CNS do Profissional: </label>
+                  <div class="col-sm-4">
+                     <input type="text" id="cns" class="input-md form-control" ng-model="usuCtrl.usuario.userData.cns" ng-keyup="usuCtrl.permiteApenasNumeroCNS()" maxlength="15"/>
+                  </div>
+                </div>
+                
+                <div class="form-group row" ng-if="usuCtrl.showingMunicipio()">
+                  <label for="municipio" class="col-sm-2 control-label">Município </label>
+                  <div angucomplete-alt id="municipio"
+                      remote-url="/municipios/search?term="
+                      title-field="nome,estado.sigla"
+                      ng-model="usuCtrl.usuario.userData.municipio"
+                      pause="100"
+                      text-searching="Pesquisando..."
+                      text-no-results="Nenhum registro encontrado."
+                      minlength="3" 
+                      auto-match="true"
+                      class="col-sm-4"
+                      input-class="form-control input-md"
+                      match-class="highlight" 
+                      placeholder="Digite o município" 
+                      input-changed="usuCtrl.changingMunicipio"
+                      required
+                      >
+                  </div>
+                </div>
+                
+                
+                <div class="form-group row" ng-if="usuCtrl.showingUnidadeSaude()">
+                  <label for="unidadeSaude" class="col-sm-2 control-label">Unidade de Saúde: </label>
+                  <div angucomplete-alt id="unidadeSaude"
+                      remote-url="/unidadesaude/search/{{usuCtrl.usuario.userData.municipio.id}}/?term="
+                      title-field="nomeFantasia"
+                      ng-model="usuCtrl.usuario.userData.unidadeSaude"
+                      pause="100"
+                      text-searching="Pesquisando..."
+                      text-no-results="Nenhum registro encontrado."
+                      minlength="3" 
+                      auto-match="true"
+                      class="col-sm-4"
+                      input-class="form-control input-md"
+                      match-class="highlight" 
+                      placeholder="Digite a unidade de saúde" 
+                      selected-fn="usuCtrl.selectingUnidadeSaude"
+                      input-changed="usuCtrl.changingUnidadeSaude"
+                      required
+                      >
+                  </div>
+                </div>
+                
+                <div class="form-group row" ng-if="usuCtrl.showingEquipe()">
+                  <label for="equipe" class="col-sm-2 control-label">Equipe: </label>
+                  <div class="col-sm-4">
+                     <select id="equipe" class="input-md form-control" ng-model="usuCtrl.usuario.userData.equipe"
+                      ng-options="equipe as equipe.description for equipe in usuCtrl.equipes track by equipe.id"
+                      ng-change="usuCtrl.changingEquipe()"
+                     required >
+                      <option value="">Selecione</option>
+                    </select>
+                  </div>
+                </div>
+
+
+                <div class="form-group row" ng-if="usuCtrl.showingMicroarea()">
+                  <label for="microarea" class="col-sm-2 control-label">Microarea: </label>
+                  <div class="col-sm-4">
+                     <input type="text" id="microarea" class="input-md form-control" ng-model="usuCtrl.usuario.userData.microarea" />
+                  </div>
+                </div>
+                
+
+              </div>
+
+              <div class="row col-lg-12">
+                <button id="cancelar" type="reset" class="btn btn-default pull-right" ng-click="usuCtrl.cancelar()">Cancelar</button>
+                <button type="submit" class="btn btn-success pull-right" ng-click="usuCtrl.salvar()"
+                  style="margin-right: 10px;">{{usuCtrl.usuario.id ? 'Concluir edição' : 'Salvar'}}</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default" ng-show="!usuCtrl.estaEditandoAdicionando()">
+        <div class="panel-heading" style="font-size: 20px;">Lista de Usuários</div>
+        <div class="panel-body">
+
+          <div class="form-group row">
+            <label for="usuarioNome" class="col-sm-2 control-label">Nome: </label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control input-md" id="usuarioNome" ng-model="usuCtrl.usuarioNome">
+            </div>
+            <div class="col-sm-4">
+              <button id="Buscar" type="reset" class="btn btn-primary pull-left" ng-click="usuCtrl.carregarTela(1)">Buscar</button>
+            </div>
+          </div>
+
+          <table class="table table-striped table-bordered table-hover table-condensed" style="margin-top: 10px;">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Login</th>
+                <th>Perfil</th>
+                <th style="width: 10%"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd gradeX" ng-repeat="usuario in usuCtrl.usuarios" ng-show="usuCtrl.usuarios.length > 0">
+                <td>{{::usuario.nome}}</td>
+                <td>{{::usuario.email}}</td>
+                <td>{{::usuario.login}}</td>
+                <td>{{usuCtrl.getPerfilDescricao(usuario.perfis)}}</td>
+                <td style="text-align: center;">
+                  <button ng-click="usuCtrl.editar(usuario)" ng-disabled="usuCtrl.estaEditandoAdicionado()"
+                    type="button" class="btn btn-xs btn-default" style="margin-left: 10px;" title="Editar">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                  </button>
+
+                  <button ng-click="usuCtrl.abrirModalConfirmarExcluirUsuario(usuario)" 
+                    ng-disabled="usuCtrl.estaEditandoAdicionado()" type="button"
+                    class="btn btn-xs btn-danger" title="Excluir">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                  </button>
+                </td>
+              </tr>
+              <tr ng-show="usuCtrl.usuarios.length == 0">
+                <td colspan="5">Nenhum registro encontrado.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <paginacao paginador="usuCtrl.paginador"></paginacao>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/ng-template" id="modalConfirmarExcluirUsuario.html">
+    <div class="modal-header">
+      <button type="button" class="close" aria-label="Close" ng-click="$dismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4 class="modal-title" id="myModalLabel">Confirmação</h4>
+    </div>
+    <div class="modal-body">Confirma a exclusão do usuario {{usuCtrl.usuario.nome}}?</div>
+    <div class="modal-footer">
+      <button id="cancelar" type="button" class="btn btn-default"
+        ng-click="usuCtrl.cancelarExclusao()">Cancelar</button>
+      <button id="excluir" type="button" class="btn btn-primary" ng-click="usuCtrl.excluir()">Excluir</button>
+    </div>
+  </script>
+  
+  <script type="text/ng-template" id="modalUnidadeSaude.html">
+    <div class="modal-header">
+      <button type="button" class="close" aria-label="Close" ng-click="usuCtrl.cancelarModalUnidade()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4 class="modal-title" id="myModalLabel">Atualização de Unidade de Saúde</h4>
+    </div>
+
+    <div class="modal-body">
+      <p>Não é possível associar uma Unidade de Saúde que não possua um <strong>CNPJ</strong> (ou <strong>CPF</strong> do responsável) cadastrado.
+         Atualize a Unidade de Saúde para continuar.
+      </p>
+      <br>
+      <!-- Formulário de Cadastro de Solicitação de Impacto -->
+      <form role="unindadeSaudeForm" class="form" ng-submit="usuCtrl.atualizarUnidade()" name="solicitacaoForm">
+        <unidade-saude-edit unidade="usuCtrl.usuario.userData.unidadeSaude"></unidade-saude-edit>
+        <div class="form-group">
+          <div class="btn-toolbar">
+            <button type="submit" class="btn btn-primary  pull-right">Salvar</button>
+          </div>
+        </div>
+      </form>
+    </div> 
+    
+    <div class="modal-footer">
+      <button id="cancelar" type="button" class="btn btn-default" ng-click="usuCtrl.cancelarModalUnidade()">Cancelar</button>
+    </div>
+  </script>
+  
+</div>

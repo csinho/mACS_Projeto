@@ -1,0 +1,87 @@
+#{extends 'main.html' /} #{set title:'Perfil Usuários' /}
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/controllers/device.controller.js'}" type="text/javascript" charset="UTF-8"></script>
+#{/set}
+
+<div ng-controller="DeviceController as deviceCtrl">
+  <div class="container" style="width: auto !important">
+    <div id="wrapper" style="padding: 20px">
+      <div class="body-content row" style="margin-bottom: 10px;">
+        <div class="panel-heading">
+          <button style="margin-top: -7px" ng-click="deviceCtrl.adicionar()" type="button"
+            class="btn btn-primary pull-left" ng-show="!deviceCtrl.estaEditandoAdicionando()">Adicionar</button>
+        </div>
+      </div>      
+      <div ng-if="deviceCtrl.estaEditandoAdicionando()">
+         #{include 'Devices/form.html' /}
+      </div>
+      
+      <div class="panel panel-default" ng-show="!deviceCtrl.estaEditandoAdicionando()">
+        <div class="panel-heading" style="font-size: 20px;">Lista de Dispositivos</div>
+        <div class="panel-body">
+          <div class="form-group row">
+            <label for="usuarioNome" class="col-sm-1 control-label">UUID: </label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control input-md" id="usuarioNome" ng-model="deviceCtrl.campoBusca">
+            </div>
+            <div class="col-sm-4">
+              <button id="Buscar" type="reset" class="btn btn-primary pull-left" ng-click="deviceCtrl.carregarTela(1)">Buscar</button>
+            </div>
+          </div>
+          <table class="table table-striped table-bordered table-hover table-condensed" style="margin-top: 10px;">
+            <thead>
+              <tr>
+                <th>UUID</th>
+                <th>Agente Associado</th>
+                <th>Descrição</th>
+                <th>Status</th>
+                 <th style="width: 10%"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd gradeX" ng-repeat="device in deviceCtrl.devices" ng-show="deviceCtrl.devices.length > 0">
+                <td>{{::device.imei}}</td>
+                <td>{{::device.deviceUser.nome}}</td>
+                <td>{{::device.desc}}</td>
+                <td>{{::device.status == 'active' ? 'ATIVO' : 'INATIVO'}}</td>
+                
+                <td style="text-align: center;">
+                  <button ng-click="deviceCtrl.editar(device)" ng-disabled="deviceCtrl.estaEditandoAdicionado()"
+                    type="button" class="btn btn-xs btn-default" style="margin-left: 10px;" title="Editar">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                  </button>
+
+                  <button ng-click="deviceCtrl.abrirModalConfirmarExcluirDispositivo(device)" 
+                    ng-disabled="deviceCtrl.estaEditandoAdicionado()" type="button"
+                    class="btn btn-xs btn-danger" title="Excluir">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                  </button>
+                </td>                
+              </tr>
+              <tr ng-show="deviceCtrl.devices.length == 0">
+                <td colspan="5" style="text-align:center;">Nenhum registro encontrado</td>
+              </tr>
+            </tbody>
+          </table>
+          <paginacao paginador="deviceCtrl.paginador"></paginacao>
+        </div>
+      </div>
+    </div>
+  </div>  
+  
+  <script type="text/ng-template" id="modalConfirmarExcluirDispositivo.html">
+    <div class="modal-header">
+      <button type="button" class="close" aria-label="Close" ng-click="deviceCtrl.dismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4 class="modal-title" id="myModalLabel">Confirmação</h4>
+    </div>
+    <div class="modal-body">Confirma a exclusão do dispositivo {{deviceCtrl.device.imei}}?</div>
+    <div class="modal-footer">
+      <button id="cancelar" type="button" class="btn btn-default"
+        ng-click="deviceCtrl.cancelarExclusao()">Cancelar</button>
+      <button id="excluir" type="button" class="btn btn-primary" ng-click="deviceCtrl.excluir()">Excluir</button>
+    </div>
+  </script>
+  
+</div>

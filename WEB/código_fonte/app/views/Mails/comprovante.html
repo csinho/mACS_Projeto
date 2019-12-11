@@ -1,0 +1,18 @@
+<html>
+<body>
+  #{embeddedImage src:'file:///public/images/logo_email.png', name:'Logo', alt:'Logo', height: '80', width: '60' /} <span style="font-size:26px;font-weight: bold;"> Sistema de Retaguarda - Mapa da Saúde</span>
+  <h2>Prezado Usuário</h2>
+  <p>Segue sua solicitação para redefinir a senha do Sistema de Retaguarda - Mapa da Saúde.
+  Caso a redefinição não tenha sido solicitada, desconsiderar a mensagem.</p>
+  <table style="border: none">
+  	<tr>
+  		<td><b>Usuário:</b></td>
+  		<td>${usuario.getLogin()}</td>
+  	</tr>
+  	<tr>
+  		<td><b>Redefinir:</b></td>
+  		<td><a href="http://${url}/logins/recuperar/${usuario.getToken()}">Clique aqui</a></td>
+  	</tr>
+  </table>
+</body>
+</html>

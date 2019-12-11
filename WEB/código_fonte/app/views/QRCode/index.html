@@ -1,0 +1,42 @@
+#{extends 'main.html' /} #{set title:'Procon BA' /}
+
+<script src="@{'/public/javascripts/controllers/qrcodes.controller.js'}" type="text/javascript" charset="UTF-8"></script>
+
+<div class="row col-lg-12" style="text-align: center;" ng-controller="QRCodesController as qr">
+  
+  <div class="qrcode-form">
+   <div class="form-group row row-centered">
+    <div class="col-md-4 col-centered">
+      <div class="input-group pull-right">
+         <div class="input-group-addon">Quantidade de QR Codes:</div>
+         <input class="form-control input-md" id="qtd" type="text" ng-model="qr.txtNumQR"/>
+       </div>
+    </div>
+    <div class="col-md-3 col-centered">
+      <button class="pull-left btn btn-default" ng-click="qr.generate()">Gerar</button>
+      <button ng-if="qr.data && qr.data.length > 0" class="pull-left btn btn-default" style="margin-left:10px;" ng-click="qr.print()"><span style="padding-right:5px" class="glyphicon glyphicon-print" aria-hidden="true"></span>Imprimir</button>
+    </div>    
+   </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="col-md-9 col-md-offset-2">
+        <div ng-repeat="currentQR in qr.data">   
+         <div class="qrcode-div">
+           <div style="text-align:center;width:100%" class="qrcode-title">Mapa da Saúde</div>
+           <qrcode version="{{qr.version}}" 
+                 error-correction-level="{{qr.errorCorrectionLevel}}" 
+                 size="{{qr.size}}" 
+                 data="{{currentQR}}">
+           </qrcode>
+           <div  style="text-align:center;width:100%" class="qrcode-caption">{{currentQR}}</div>
+         </div>
+       </div>
+    </div>
+   </div>
+  </div>
+
+
+
+
+</div>

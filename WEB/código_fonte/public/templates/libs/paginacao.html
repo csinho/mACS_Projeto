@@ -1,0 +1,24 @@
+<ul class="pagination" ng-show="paginador.numeroPaginas > 1">
+    <li ng-class="{disabled: paginador.paginaAtual == 1}">
+        <a href ng-click="paginador.irParaPagina(1)">{{paginador.options.labels.primeira}}</a>
+    </li>
+    <li ng-class="{disabled: paginador.paginaAtual == 1}">
+        <a href ng-click="paginador.paginaAnterior()">{{paginador.options.labels.anterior}}</a>
+    </li>
+    <li ng-repeat="n in paginador.paginas(s)"
+        ng-class="{active: n == paginador.paginaAtual}"
+        ng-click="paginador.irParaPagina(n)">
+        <a href ng-bind="n">1</a>
+    </li>
+    <li ng-class="{disabled: paginador.paginaAtual == paginador.numeroPaginas }">
+        <a href ng-click="paginador.proximaPagina()">{{paginador.options.labels.proxima}}</a>
+    </li>
+    <li ng-class="{disabled: paginador.paginaAtual == paginador.numeroPaginas }">
+        <a href ng-click="paginador.irParaPagina(paginador.numeroPaginas)">{{paginador.options.labels.ultima}}</a>
+    </li>
+</ul>
+<ul class="pagination" ng-show="paginador.total > 0">
+    <li class="disabled">
+        <a href>Total: {{paginador.total}} registro(s)</a>
+    </li>
+</ul>

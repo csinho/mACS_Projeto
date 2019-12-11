@@ -1,0 +1,84 @@
+#{extends 'main.html' /} #{set title:'Versões App' /} #{set 'moreScripts'}
+<script src="@{'/public/javascripts/controllers/app.controller.js'}" type="text/javascript" charset="UTF-8"></script>
+#{/set}
+
+<div ng-controller="AppController as appCtrl">
+    <div class="container" style="width: auto !important">
+        <div id="wrapper" style="padding: 20px">
+            <div class="body-content row" style="margin-bottom: 10px;">
+                <div class="panel-heading">
+                    <button style="margin-top: -7px" ng-click="appCtrl.adicionar()" type="button" class="btn btn-primary pull-left" ng-show="!appCtrl.estaEditandoAdicionando()">Adicionar</button>
+                </div>
+            </div>
+            <div ng-if="appCtrl.estaEditandoAdicionando()">
+                #{include 'Apps/form.html' /}
+            </div>
+
+            <div class="panel panel-default" ng-show="!appCtrl.estaEditandoAdicionando()">
+                <div class="panel-heading" style="font-size: 20px;">Lista de versões da App Mobile</div>
+                <div class="panel-body">
+                    <div class="form-group row">
+                        <label for="usuarioNome" class="col-sm-1 control-label">Descrição: </label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control input-md" id="usuarioNome" ng-model="appCtrl.campoBusca">
+                        </div>
+                        <div class="col-sm-4">
+                            <button id="Buscar" type="reset" class="btn btn-primary pull-left" ng-click="appCtrl.carregarTela(1)">Buscar</button>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-bordered table-hover table-condensed" style="margin-top: 10px;">
+                        <thead>
+                            <tr>
+                                <th>Data de cadastro</th>
+                                <th>Código da versão</th>
+                                <th>Descrição</th>
+                                <th>Está válida</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd gradeX" ng-repeat="appData in appCtrl.apps" ng-show="appCtrl.apps.length > 0">
+                                <td>{{::appData.versionDate | date:'dd/MM/yyyy'}}</td>
+                                <td>{{::appData.version}}</td>
+                                <td>{{::appData.versionDesc}}</td>
+                                <td>{{::appData.isValid? 'Sim': 'Não'}}</td>
+                                <td style="text-align: center;">
+                                    <button ng-click="appCtrl.editar(appData)" ng-disabled="appCtrl.estaEditandoAdicionado()" type="button" class="btn btn-xs btn-default" style="margin-left: 10px;" title="Editar">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                  </button>
+                                    <button ng-click="appCtrl.openModelToConfirmDelete(appData)" type="button" class="btn btn-xs btn-danger" title="Excluir">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                  </button>
+                                </td>
+                            </tr>
+                            <tr ng-show="appCtrl.apps.length == 0">
+                                <td colspan="5" style="text-align:center;">Nenhum registro encontrado</td>
+                            </tr>
+                            <tr ng-show="appCtrl.appsToUpdate.length > 0">
+                                <td colspan="5" style="text-align:center;">
+                                    <button id="save" type="reset" class="btn btn-primary pull-left" ng-click="appCtrl.update()">Salvar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <paginacao paginador="appCtrl.paginador"></paginacao>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/ng-template" id="modalConfirmarExcluirApp.html">
+        <div class="modal-header">
+            <button type="button" class="close" aria-label="Close" ng-click="appCtrl.dismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+            <h4 class="modal-title" id="myModalLabel">Confirmação</h4>
+        </div>
+        <div class="modal-body">A exclusão fará com que todos os dispositivos que usam essa versão da App deixem de funcionar. Confirma a exclusão da App {{appCtrl.app.versionDesc}} versão {{appCtrl.app.version}}?</div>
+        <div class="modal-footer">
+            <button id="cancelar" type="button" class="btn btn-default" ng-click="appCtrl.cancelarExclusao()">Cancelar</button>
+            <button id="excluir" type="button" class="btn btn-primary" ng-click="appCtrl.deleteApp()">Excluir</button>
+        </div>
+    </script>
+
+</div>

@@ -1,0 +1,102 @@
+#{extends 'main.html' /} #{set title:'Perfil Usuários' /}
+
+<script src="@{'/public/javascripts/services/unidadessaude.js'}" type="text/javascript" charset="UTF-8"></script>
+<script src="@{'/public/javascripts/controllers/unidadessaude.controller.js'}" type="text/javascript" charset="UTF-8"></script>
+<script src="@{'/public/javascripts/controllers/usuarios.controller.js'}" type="text/javascript" charset="UTF-8"></script>
+<script src="@{'/public/javascripts/services/formService.js'}" type="text/javascript" charset="UTF-8"></script>
+<script src="@{'/public/javascripts/services/usuarioService.js'}" type="text/javascript" charset="UTF-8"></script>
+
+<div ng-controller="UsuariosController as usuCtrl">
+#{include 'Usuarios/modalConfirmacao.html' /}
+  <div class="container" style="width: auto !important">
+    <div id="wrapper" style="padding: 20px">
+      <div class="body-content row" style="margin-bottom: 10px;">
+	
+        <div class="panel-body" style="margin-top: 35px;" >
+          <div class="col-lg-12">
+            <form role="form">
+              <div class="row form-group">
+
+                <div class="form-group row">
+                  <label for="usuarioNome" class="col-sm-2 control-label">Nome: </label>
+                  <div class="col-sm-4">
+                    <span  class="form-control input-md">${controllers.Secure.usuarioLogado().getNome()}</span>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="login" class="col-sm-2 control-label">Login: </label>
+                  <div class="col-sm-4">
+                      <span  class="form-control input-md">${controllers.Secure.usuarioLogado().getLogin()}</span>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="usuarioEmail" class="col-sm-2 control-label">Email: </label>
+                  <div class="col-sm-4">
+                     <span  class="form-control input-md">${controllers.Secure.usuarioLogado().getEmail()}</span>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="usuarioPerfil" class="col-sm-2 control-label">Perfil: </label>
+                  <div class="col-sm-4">
+                     <span  class="form-control input-md">${controllers.Secure.usuarioLogado().getPerfis()}</span>
+                  </div>
+                </div>
+                
+                #{if controllers.Secure.temPerfil("usuario")}
+                
+	                <div class="form-group row">
+	                  <label class="col-sm-2 control-label">CNS do Profissional: </label>
+	                  <div class="col-sm-4">
+	                     <span class="form-control input-md">${controllers.Secure.usuarioLogado().getUserData().getCns()}</span>
+	                  </div>
+	                </div>
+	                
+	                <div class="form-group row">
+	                	<div ng-if="usuCtrl.usuarioLogado.listaDispositivos.length >= 0">
+	                		<label class="col-sm-2 control-label">Dispositivo<label>(s)</label>: </label>
+	                	</div>
+	                  	<div class="col-sm-10">
+	                    	<span ng-repeat="dispositivo in usuCtrl.usuarioLogado.listaDispositivos track by $index"
+                          	  		class="label label-info"
+                          	  		 style="margin: 2px; display: inline-block; line-height: 2 !important; font-size: 90% !important">
+									{{dispositivo.imei}}	                    			  	
+	                    	</span>
+                  		</div>
+                	</div>
+                #{/if}
+                
+                 <div class="form-group row">
+                  <label for="usuarioPerfil" class="col-sm-2 control-label">Token: </label>
+                  <div class="col-sm-8">
+                  		<textarea ng-model="usuCtrl.usuarioLogado.apiToken" ng-disabled="false" class="token col-md-12 "></textarea>  
+                  </div>
+                  
+               		<button ng-click="usuCtrl.copiarTokenAreaTransferencia()" ng-disabled="usuCtrl.desabilitarBTNAtualizarToken" class="btn btn-default">Copiar Token</button>
+                </div>
+                
+                <button ng-click="usuCtrl.abrirModalConfigurarToken()" ng-disabled="usuCtrl.desabilitarBTNAtualizarToken" class="btn btn-primary">Atualizar Token</button>
+              	<button ng-click="usuCtrl.removerApiToken()" ng-disabled="usuCtrl.desabilitarBTNAtualizarToken" class="btn btn-danger">Remover Token</button>
+              
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+

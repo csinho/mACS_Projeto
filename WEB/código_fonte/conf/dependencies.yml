@@ -1,0 +1,7 @@
+# Application dependencies
+
+require:
+    - play
+    - net.sf.flexjson -> flexjson 3.3
+    - com.google.guava -> guava 18.0
+    - de.micromata.jak -> JavaAPIforKml 2.2.0

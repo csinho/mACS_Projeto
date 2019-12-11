@@ -1,0 +1,17 @@
+<html>
+<body>
+  #{embeddedImage src:'file:///public/images/logo_email.png', name:'Logo', alt:'Logo', height: '80', width: '60' /} <span style="font-size:26px;font-weight: bold;"> Sistema de Retaguarda - Mapa da Saúde</span>
+  <h2>Prezado Usuário</h2>
+  <p>Você foi cadastrado com êxito no Sistema de Retaguarda - Mapa da Saúde.</p>
+  <p>Seguem seus dados de acesso abaixo:</p>
+  <table style="border: none">
+    <tr>
+      <td><b>Login: ${usuario.getLogin()}</b></td>
+      <td>Senha: ${usuario.getPass()}</td>
+    </tr>
+    <tr>
+      <td><a href="http://${url}">Clique aqui para acessar o sistema</a></td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,5 @@
+package util.Query;
+
+public enum OperatorType {
+	EQUAL,DIFERENT,GREATER,GREATER_OR_EQUAL,LESS,LESS_OR_EQUAL,CONTAIN,IN
+}

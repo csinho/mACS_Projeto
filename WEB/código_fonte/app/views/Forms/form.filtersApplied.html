@@ -1,0 +1,35 @@
+<!-- list filters -->
+<div class="panel panel-default">
+    <div class="panel-heading" style="font-size: 20px;">Filtros selecionados</div>
+    <div class="panel-body">
+        <div class="form-group row">
+            <div class="col-md-12">               
+                <table class="table table-striped table-bordered table-hover table-condensed" style="margin-top: 10px;">
+                    <thead>
+                        <tr>
+                            <th>Campo</th>
+                            <th>Operador</th>
+                            <th>Valor</th>
+                            <th style="width: 10%">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="odd gradeX" ng-repeat="filter in ctrl.viewFilters">
+                            <td>{{::filter.description}}</td>
+                            <td>{{::filter.operatorDesc}}</td>
+                            <td>{{::filter.value}}</td>
+                            <th class="text-center">
+                                <button class="btn btn-xs btn-danger" ng-click="ctrl.removeFilter($index)">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                </button>
+                            </th>
+                        </tr>
+                        <tr ng-show="ctrl.filters.length == 0">
+                            <td colspan="5" style="text-align: center;">Adicione um filtro para sua consulta</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,133 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET       /                                           Secure.form
+
+# Ignore favicon requests
+GET       /favicon.ico                                404
+
+# Map static resources from the /app/public folder to the /public path
+GET       /public/images/events/                      staticDir:public/images/events
+GET       /public/                                    staticDir:public
+
+
+OPTIONS       /{controller}/{action}                  AccessControlAllowOriginFilter.options
+
+#Sessões
+GET     /loginForm                                    Secure.form(format:'html')
+GET     /usuarioLogado                                Secure.usuarioLogadoJSON
+POST    /login                                        Secure.logar
+GET     /deslogar                                     Secure.deslogar
+GET     /deslogarAutomatico                           Secure.deslogarAutomatico
+
+#Home
+GET     /home/index                                   Home.index
+
+#Usuarios
+GET     /usuarios/index                               Usuarios.index
+GET     /usuarios/buscarcombo                         Usuarios.buscarCombo
+GET     /usuarios/listar                              Usuarios.listar
+POST    /usuarios/gravar                              Usuarios.salvar
+GET     /usuarios/deletar                             Usuarios.deletar
+GET     /usuarios/buscarcomboperfil                   Usuarios.buscarComboPerfil
+GET     /usuarios/exibir                              Usuarios.exibir
+GET     /usuarios/types                               Usuarios.listUserTypes
+GET     /usuarios/current                             Usuarios.currentUser
+GET     /usuarios/search                              Usuarios.search
+POST    /usuario/atualizarapitoken/	     			  Usuarios.atualizarToken
+GET		/usuarios/usuariologadoatualizado			  Usuarios.usuarioLogadoAtualizado
+POST	/usuarios/removerApiToken/				  	  Usuarios.removerApiToken
+
+#Senha
+GET       /logins/recuperar/{token}                   Logins.recuperar
+POST      /logins/alterarsenha                        Logins.alterarSenha
+GET       /logins/enviarrecuperacaosenha/{usuario}    Logins.enviarRecuperacaoSenha
+GET       /logins/novaSenha                           Logins.novaSenha
+POST      /logins/salvarNovaSenha                     Logins.salvarNovaSenha
+
+#Dispositivos
+GET       /devices/index                              Devices.index
+GET       /devices/list                               Devices.list
+POST      /devices/                                   Devices.save
+DELETE    /devices/{id}                               Devices.delete
+GET       /devices/authorized/{uuid}                  Devices.authorized
+#POST     /devices/register/                          Devices.register
+GET       /devices/appversionisvalid                  Devices.appVersionIsValid
+
+#DeviceUsers
+GET       /deviceusers/search                         DeviceUsers.search
+
+#Domain
+GET       /domain/list                                Domains.list
+
+#Sync
+GET      /sync/download/domaindata/                  Sync.getDomainData
+GET      /sync/download/templates/                   Sync.getTemplates
+GET      /sync/download/forms/                       Sync.getPackedUserForms
+POST     /sync/upload                                Sync.upload
+GET      /sync/time                                  Sync.time
+GET      /sync/events/all                            Sync.getEvents
+GET      /sync/events/deleted                        Sync.getDeletedEvents
+GET      /sync/events/image                          Sync.getEventImage
+
+
+#Forms
+GET		/forms/operators/{dataType}				Forms.getOperators
+GET	/forms/search						 Forms.search
+GET		/forms/templates						    Forms.getFormTemplates
+GET		/forms/index					    Forms.index
+GET		/forms/fields/{idFormTemplate}			    Forms.getFields
+GET   /forms/downloads/?           Forms.downloads
+GET		/forms/{idForm}			    Forms.getFormSet
+GET   /forms/bysluganddate/         Forms.getFormSetByFormSlugAndDate
+GET   /forms/domainoptions/{slug}          Forms.getDomainOptions
+POST  /forms/exportselected            Forms.exportSelected
+GET   /forms/revisions/{formSlug}/{currentFormId}   Forms.getFormRevisions
+POST  /forms/exportall            Forms.exportAll
+
+
+#Events
+GET     /events/index                                Events.index
+GET     /events/list/{page}                          Events.list
+GET     /events/get/{page}                           Events.get
+GET     /events/deleted                              Events.getDeleted
+GET     /events/image                                Events.getImage
+POST    /events/save                                 Events.save
+POST    /events/delete/{id}                          Events.delete
+
+#Municipios
+GET     /municipios/list                             Municipios.list
+GET     /municipios/all                              Municipios.all
+GET     /municipios/search                           Municipios.search
+
+#Unidades de Saúde
+GET     /unidadesaude/index							 UnidadesSaude.index
+GET     /unidadesaude/list                           UnidadesSaude.list
+GET     /unidadesaude/get/{id}                       UnidadesSaude.get
+GET     /unidadesaude/search                         UnidadesSaude.search
+GET     /unidadesaude/searchByUnidade                UnidadesSaude.searchByUnidade
+GET     /unidadesaude/search/{municipioId}/          UnidadesSaude.searchByMunicipio
+GET     /unidadesaude/get/{id}                       UnidadesSaude.get
+POST     /unidadesaude/salvar                         UnidadesSaude.salvar
+
+#Equipes
+GET     /equipes/list/{unidade}                      Equipes.list
+GET     /equipes/get/{id}                            Equipes.get
+GET     /equipes/search                              Equipes.search
+GET     /equipes/search/{unidade}/                   Equipes.searchByUnidade
+
+#XML
+GET     /qrcodes                                     QRCode.index
+
+#APPS
+GET       /apps/index                              Apps.index
+GET       /apps/list                               Apps.list
+POST      /apps/                                   Apps.save
+DELETE    /apps/{id}                               Apps.delete
+GET       /apps/versionisvalid                     Apps.versionIsValid
+
+#ApiService
+GET     /api/forms/search/{token}	   	  APIService.search

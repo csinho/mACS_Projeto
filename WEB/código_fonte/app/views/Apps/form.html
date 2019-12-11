@@ -1,0 +1,43 @@
+      <div class="panel panel-default">
+        <div class="panel-heading" style="font-size: 20px;">{{appCtrl.app.id ? 'Atualização de App' : 'Cadastro de App'}}</div>
+        <div class="panel-body" style="margin-top: 35px;">
+          <div class="col-lg-12">
+            <form role="form">              
+              <div class="row form-group">
+
+                <div class="form-group row">
+                  <label for="disappVersionpUUID" class="col-sm-1 control-label">Versão </label>
+                  <div class="col-sm-4">
+                    <input ui-mask="9.9.9?9" model-view-value="true" type="text" class="form-control input-md" id="appVersion" 
+                    ng-model="appCtrl.app.version" 
+                    required>
+                  </div>
+                </div>
+                
+                <div class="form-group row">
+                  <label for="isValid" class="col-sm-1 control-label">Está válida: </label>
+                  <div class="col-sm-4">
+                    <input type="checkbox" class="input-md" id="isValid" 
+                    ng-model="appCtrl.app.isValid">
+                  </div>
+                </div>
+                
+                <div class="form-group row">
+                  <label for="dispDescricao" class="col-sm-1 control-label">Descrição: </label>
+                  <div class="col-sm-4">
+                    <textarea class="form-control input-md" id="dispDescricao" 
+                    ng-model="appCtrl.app.versionDesc" rows="5" style="resize:none;"></textarea>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row col-lg-12">
+                <button id="cancelar" type="reset" class="btn btn-default pull-right" ng-click="appCtrl.cancelar()">Cancelar</button>
+                <button type="submit" class="btn btn-success pull-right" ng-click="appCtrl.salvar()"
+                  style="margin-right: 10px;">{{appCtrl.app.id ? 'Concluir edição' : 'Salvar'}}</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>

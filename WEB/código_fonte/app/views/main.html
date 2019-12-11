@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Mapa da Saúde - #{get 'title'/}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/font-awesome.min.css'}">
+  <link rel="stylesheet" media="all" href="@{'/public/stylesheets/bootstrap.min.css'}">
+  <link rel="stylesheet" media="all" href="@{'/public/stylesheets/bootstrap-navbar-style.css'}">
+  <link rel="stylesheet" media="all" href="@{'/public/stylesheets/toastr.css'}">
+  <link rel="stylesheet" media="all" href="@{'/public/stylesheets/main.css'}">
+  <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/angucomplete.css'}">
+  <link rel="stylesheet" media="screen" href="@{'/public/javascripts/vendor/ng-img-crop-full-extended/compile/minified/ng-img-crop.css'}">
+
+  <link rel="icon" type="image/png" href="@{'/public/images/brasao.png'}">
+  #{get 'moreStyles' /}
+
+  <script src="@{'/public/javascripts/vendor/jquery.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/toastr.js'}" type="text/javascript" charset="UTF-8"></script>
+
+
+  <script src="@{'/public/javascripts/vendor/angular.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/ui-bootstrap.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/bootstrap.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/angular-resource.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/angular-animate.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/angular-sanitize.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/angular-locale_pt-br.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/angularjs-dropdown-multiselect.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/angular-br-filters.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/lodash.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/ui-utils.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/masks.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/bowser.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/angular-prodeb-components.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/moment.min.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/moment.pt-br.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/angucomplete.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/qrcode-generator/js/qrcode.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/angular-qrcode/angular-qrcode.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/vendor/ng-img-crop-full-extended/compile/minified/ng-img-crop.js'}" type="text/javascript" charset="UTF-8"></script>
+
+  <script src="@{'/public/javascripts/app/app.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/app/app.config.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/app/app.run.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/app/directives.js'}" type="text/javascript" charset="UTF-8"></script>
+  <script src="@{'/public/javascripts/filters/array.filter.js'}" type="text/javascript" charset="UTF-8"></script>
+
+
+
+  #{get 'moreScripts' /}
+</head>
+
+
+<body ng-app="app" ng-style="resizeWithOffset(0)" resize notifier="notifyServiceOnChage(params)">
+  <div id="navegadores-suportados" class="panel panel-danger hide hidden-print">
+    <div class="panel-heading">Navegador não suportado</div>
+    <div class="panel-body">
+      <p>Por favor instale um dos navegadores compatíveis abaixo: </p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">Chrome versão 28 ou maior</li>
+      <li class="list-group-item">Internet Explorer versão 11 ou maior</li>
+      <li class="list-group-item">FireFox versão 31 ou maior</li>
+    </ul>
+  </div>
+
+  <div id="main" class="wrapper">
+    #{if controllers.Secure.autenticado()}
+      #{include 'navigation.html' /}
+    #{/if}
+    <spinner></spinner>
+    <div id="content" class="container" #{if controllers.Secure.autenticado()} style="margin-top: 70px;"#{/if}>#{doLayout /}</div>
+  </div>
+    <footer class="footer">
+      <div class="container">
+        <img src="/public/images/logo_secretaria_horizontal.png">
+      </div>
+    </footer>
+</body>
+
+</html>

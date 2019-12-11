@@ -1,0 +1,71 @@
+#{extends 'main.html' /} #{set title:'Eventos' /} #{set 'moreScripts'}
+<script src="@{'/public/javascripts/services/event.js'}" type="text/javascript" charset="UTF-8"></script>
+<script src="@{'/public/javascripts/controllers/event.controller.js'}" type="text/javascript" charset="UTF-8"></script>
+#{/set}
+
+<div ng-controller="EventController as eventCtrl">
+    <div class="container" style="width: auto !important">
+        <div id="wrapper" style="padding: 20px">
+            <div class="body-content row" style="margin-bottom: 10px;">
+                <div class="panel-heading">
+                    <button style="margin-top: -7px" ng-click="eventCtrl.adicionar()" type="button" class="btn btn-primary pull-left" ng-show="!eventCtrl.estaEditandoAdicionando()">Adicionar</button>
+                </div>
+            </div>
+            <div ng-show="eventCtrl.estaEditandoAdicionando()">
+                #{include 'Events/form.html' /}
+            </div>
+
+            <div class="panel panel-default" ng-show="!eventCtrl.estaEditandoAdicionando()" ng-cloak>
+                <div class="panel-heading" style="font-size: 20px;">Lista de Eventos</div>
+                <div class="panel-body">
+                    <table class="table table-striped table-bordered table-hover table-condensed" style="margin-top: 10px;">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%">Título</th>
+                                <th style="width: 50%">Descrição</th>
+                                <th>Data</th>
+                                <th style="width: 10%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd gradeX" ng-repeat="event in eventCtrl.events" ng-show="eventCtrl.events.length > 0">
+                                <td>{{::event.title}}</td>
+                                <td>{{::event.description}}</td>
+                                <td>{{::event.date | date:'dd/MM/yyyy'}} às {{::event.date | date:'HH:mm'}}</td>
+
+                                <td style="text-align: center;">
+                                    <button ng-click="eventCtrl.editar(event)" ng-disabled="eventCtrl.estaEditandoAdicionado()" type="button" class="btn btn-xs btn-default" style="margin-left: 10px;" title="Editar">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                  </button>
+
+                                    <button ng-click="eventCtrl.abrirModalConfirmarExcluirEvent(event)" ng-disabled="eventCtrl.estaEditandoAdicionado()" type="button" class="btn btn-xs btn-danger" title="Excluir">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                  </button>
+                                </td>
+                            </tr>
+                            <tr ng-show="eventCtrl.events.length == 0">
+                                <td colspan="5" style="text-align:center;">Nenhum registro encontrado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <paginacao paginador="eventCtrl.paginador"></paginacao>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/ng-template" id="modalConfirmarExcluirEvent.html">
+        <div class="modal-header">
+            <button type="button" class="close" aria-label="Close" ng-click="$dismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+            <h4 class="modal-title" id="myModalLabel">Confirmação</h4>
+        </div>
+        <div class="modal-body">Confirma a exclusão do evento "{{eventCtrl.event.title}}"?</div>
+        <div class="modal-footer">
+            <button id="cancelar" type="button" class="btn btn-default" ng-click="eventCtrl.cancelarExclusao()">Cancelar</button>
+            <button id="excluir" type="button" class="btn btn-primary" ng-click="eventCtrl.excluir()">Excluir</button>
+        </div>
+    </script>
+
+</div>

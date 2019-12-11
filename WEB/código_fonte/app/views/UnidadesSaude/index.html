@@ -1,0 +1,22 @@
+#{extends 'main.html' /} 
+#{set title: '- Unidades de Saúde'/}
+<script src="@{'/public/javascripts/services/unidadessaude.js'}" type="text/javascript" charset="UTF-8"></script>
+<script src="@{'/public/javascripts/controllers/unidadessaude.controller.js'}" type="text/javascript" charset="UTF-8"></script>
+
+	<div ng-controller="UnidadesSaudeController as ctrl" ng-init="ctrl.iniciar()">
+		<div class="container" style="width: auto !important">
+			<div id="wrapper" style="padding: 20px">
+				<!-- Listagem de solicitacoes -->
+				<div ng-show="ctrl.isListar()">
+					#{include 'UnidadesSaude/lista.html' /}
+				</div>
+				
+				<!-- Cadastro de solicitacoes-->
+				<div ng-show="ctrl.isEditar()">
+					#{include 'UnidadesSaude/cadastro.html' /}
+				</div>
+		
+			</div>
+		</div> 
+	</div>
+</div>

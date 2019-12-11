@@ -1,0 +1,15 @@
+<style>
+  #spin-label-component {
+    min-width: 10%;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index:10000;
+  }
+</style>
+
+<label id="spin-label-component" class="label label-info" ng-show="spinner && spinner.show">
+  <span id="spin-label-text">{{spinner.message}}</span>
+    <i class="fa fa-spinner fa-spin"></i>
+</label>

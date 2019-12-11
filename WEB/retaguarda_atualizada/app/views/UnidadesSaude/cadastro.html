@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+  <div class="panel-heading" style="font-size: 20px;">Editar Unidade de Saúde</div>
+  <div class="panel-body">
+    <!-- Formulário de Cadastro de Solicitação de Impacto -->
+    <form role="unindadeSaudeForm" class="form" ng-submit="ctrl.salvar()" name="solicitacaoForm">
+      
+      <unidade-saude-edit unidade="ctrl.unidade"></unidade-saude-edit>
+      
+      <div class="form-group">
+        <div class="btn-toolbar">
+          <button type="button" class="btn btn-secondary  pull-right"
+            ng-click="ctrl.voltar()">Voltar</button>
+          <button type="submit" class="btn btn-primary  pull-right"
+            ng-show="ctrl.isAdicionar() || ctrl.isEditar()">Salvar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>    

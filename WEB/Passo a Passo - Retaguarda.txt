@@ -1,0 +1,17 @@
+Depois que estiver com o projeto
+
+T1 - Copiar as libs da pasta "lib" - está na área de trabalho, para dentro da pasta (lib) dentro do projeto.
+
+T2 - Retirar a lib - hibernate-core-5.0.12.Final ( direto na pasta ) e salvar em um outro local
+
+T3 - Abrir o CMD direto da raiz do projeto e rodar
+
+1 - play clean
+2 - play deps
+3 - play eclipsify
+
+T4 - Depois importar o projeto no eclipse.
+
+T5 - Adc a lib - hibernate-core-5.0.12.Final ( direto na pasta ), salva no local (t2)
+T6 - Adc as libs no projeto - (/lib/Build Path/ Configure Build Path/JAVA Build Path/Libraries/Add JARs)
+

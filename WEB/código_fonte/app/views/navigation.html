@@ -1,0 +1,73 @@
+
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-fixed-top" ng-cloak>
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" ng-click="isCollapsed = !isCollapsed" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/">
+        <img src="/public/images/logo_pequena.png" style="margin-top: 10px;" height="30px">
+      </a>
+    </div>
+
+    <div id="navbar" class="navbar-collapse collapse" uib-collapse="!isCollapsed">
+      <ul class="nav navbar-nav">
+        <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Início</a></li>
+		<!--Eventos  -->
+		<li uib-dropdown>
+          <a href="/events/index"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Eventos	 </a>
+        </li>
+		<!--Formulairos  -->
+		<li uib-dropdown>
+          <a href="/forms/index"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Formulários </a>
+        </li>
+
+        <li uib-dropdown>
+          <a href="/qrcodes"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span> Gerar QRCodes</a>
+        </li> 
+        
+		<!--Administração  -->
+        #{if controllers.Secure.temPerfil("administrador") || controllers.Secure.temPerfil("gestor_estado") || controllers.Secure.temPerfil("gestor_municipio") || controllers.Secure.temPerfil("gestor_unidade")}        
+        <li uib-dropdown>
+          <a id="drop1" href="#" uib-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+           <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Administração
+            <span class="caret"></span>
+          </a>
+          <ul uib-dropdown-menu aria-labelledby="administracao">
+            <li><a id="menuUsuario" href="/usuarios/index"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Usuários</a></li>
+            #{if controllers.Secure.temPerfil("administrador") || controllers.Secure.temPerfil("gestor_unidade") || controllers.Secure.temPerfil("gestor_municipio")} 
+            <li><a id="menuDispositivos" href="/devices/index"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> Dispositivos</a></li>
+            #{/if}
+            #{if controllers.Secure.temPerfil("administrador")}    
+               <li><a id="unidadesDeSaude" href="/apps/index"><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span> Apps</a></li>
+            #{/if}
+            #{if controllers.Secure.temPerfil("administrador")}    
+              <li><a id="menuApps" href="/unidadesaude/index"><span class="fa fa-hospital-o"  aria-hidden="true"></span> Unidade de Saúde</a></li>
+            #{/if}
+          </ul>          
+        </li>
+        #{/if}
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+       <li uib-dropdown>
+          <a id="drop1" href="#" uib-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+           <span class="glyphicon glyphicon-user" aria-hidden="true"></span> ${controllers.Secure.usuarioLogado().getNome()}
+            <span class="caret"></span>
+          </a>
+          <ul uib-dropdown-menu aria-labelledby="administracao">
+        
+            <li><a id="menuUsuario" href="/usuarios/exibir"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Meu Perfil</a></li>
+            <li><a href="/logins/novaSenha"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Alterar Senha</a></li>
+	        <li><a href="/deslogar"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>Sair</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

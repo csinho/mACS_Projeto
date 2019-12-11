@@ -1,0 +1,62 @@
+#{extends 'main.html' /} #{set title:'Atualizar senha' /}
+<script src="@{'/public/javascripts/controllers/logins.controller.js'}" type="text/javascript" charset="UTF-8"></script>
+
+<div ng-controller="LoginsController as lgnCtrl">
+  
+  <input type="hidden" name="token" id="token" value="${token}" />
+  <input type="hidden" name="id" id="id" value="${controllers.Secure.usuarioLogado().getId()}" />
+  
+  <div class="container" style="width: 40% !important">
+    <div style="padding: 20px">
+	
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Alteração de Senha</h3>
+			</div>
+			<div class="panel-body">
+				<form class="form-signin">
+					<div class="form-group" >
+
+						<div class="row form-group">
+							<div class="col-lg-12">
+								<label class="col-sm-4 control-label">Usuário:</label>
+								<div class="col-sm-7">${controllers.Secure.usuarioLogado().getNome()}</div>
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-lg-12">
+							<label for="novaSenha" class="col-sm-4 control-label">Nova senha: </label>
+								<div class="col-sm-7">
+									<input type="password" maxlength="20" class="form-control input-md" id="novaSenha" ng-model="lgnCtrl.usuario.pass" required>
+								</div>
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-lg-12">
+								<label for="repetirSenha" class="col-sm-4 control-label">Repetir senha: </label>
+								<div class="col-sm-7">
+									<input type="password" maxlength="20" class="form-control input-md" id="repetirSenha" ng-model="lgnCtrl.usuario.passConf" required>
+								</div>
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-lg-12">
+								<div class="col-sm-4 control-label"></div>
+								<div class="col-sm-7">
+									<button type="submit" class="btn btn-success pull-right margin-top-tres" ng-click="lgnCtrl.salvarNovaSenha($event)">Alterar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+		
+    </div>
+
+  </div>
+</div>

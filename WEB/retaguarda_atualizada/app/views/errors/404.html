@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Página não encontrada</title>
+<meta http-equiv="Content-Type" content="text/html;" />
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap.min.css'}">
+<link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+</head>
+<body>
+  <div id="content">
+    #{if play.mode.name() == 'DEV'} #{404 result /} #{/if} #{else}
+    <h1>Página não encontrada</h1>
+    <p>${result.message}</p>
+    #{/else}
+  </div>
+</body>
+</html>

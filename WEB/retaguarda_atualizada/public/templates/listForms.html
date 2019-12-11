@@ -1,0 +1,35 @@
+<!-- List form search results 2 -->
+<div class="col-md-12" >
+    <table class="table table-striped table-bordered table-hover table-condensed" style="margin-top: 10px;">
+        <thead>
+            <tr>
+                <th ng-if="!essencialView && isSelectable" style="width: 5%" class="text-center"></th>
+                <th ng-if="!essencialView" style="width: 20%" class="text-center">Tipo de formulário</th>
+                <th style="width: 20%" class="text-center">Descritivo primário</th>
+                <th style="width: 20%" class="text-center">Descritivo secundário</th>
+                <th ng-if="!essencialView" style="width: 15%" class="text-center">Criado em</th>
+                <th ng-if="!essencialView" style="width: 15%" class="text-center">Sincronizado em</th>
+                <th style="width: 10%" class="text-center actions">Ações</th>
+            </tr>
+        </thead>
+        <tbody>           
+            <tr class="odd gradeX" ng-repeat="result in formsCollection">
+                <td  ng-if="!essencialView && isSelectable"><input type="checkbox" ng-model="result.selected"/></td>
+                <td ng-if="!essencialView">{{::result.desc}}  {{essencialView}}</td>
+                <td class="text-center"><span ng-if="result.primaryFormSummary.desc">{{::result.primaryFormSummary.desc}}: <br/></span><b ng-if="result.primaryFormSummary.value != 'null'">{{::result.primaryFormSummary.value}}</b></td>
+                <td class="text-center">{{}}<span ng-if="result.secondaryFormSummary.desc">{{::result.secondaryFormSummary.desc}}: <br/></span><b ng-if="result.secondaryFormSummary.value != 'null'">{{::result.secondaryFormSummary.value}}</b></td>
+                <td ng-if="!essencialView" class="text-center">{{::result.createdAt | date:'d/MM/yyyy H:mm:ss'}}</td>
+                <td ng-if="!essencialView" class="text-center">{{::result.synchronizedAt | date:'d/MM/yyyy H:mm:ss'}}</td>
+                <th class="text-center actions">
+                    <button class="btn btn-xs btn-info" ng-click="onDetailClick(result.id)">
+                        <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+                    </button>
+                </th>
+            </tr>
+            <tr ng-show="formDataCollection.length == 0">
+                <td colspan="5" style="text-align: center;">Nenhum registro encontrado</td>
+            </tr>
+        </tbody>
+    </table>
+   
+</div>

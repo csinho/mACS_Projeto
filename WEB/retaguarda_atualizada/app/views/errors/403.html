@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head >
+        <title>Acesso Não Autorizado</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap.min.css'}">
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+    </head>
+    <body>
+    	<div id="content">
+    		#{include 'topo.html' /}
+    		#{include 'menu.html' /}
+    		<div class="text-center">
+	            <h1>Acesso Não Autorizado</h1>
+	            <p>
+	                ${result.message}
+	            </p>
+            </div>
+    	</div>
+    </body>
+</html>

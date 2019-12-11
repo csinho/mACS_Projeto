@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:ns2="http://www.google.com/kml/ext/2.2" xmlns:ns3="http://www.w3.org/2005/Atom" xmlns:ns4="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document>
+        <name>MapaManifestacoes</name>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4772917,-13.0106656</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Conceição do Coité, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.2757066,-11.6337403</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itapicuru, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.010063,-11.2144632</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4939915,-12.9339739</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4050896,-12.9523046</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Santo Amaro, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.7046086,-12.5492083</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4077061,-12.9420451</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Jacobina, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.5278237,-11.181335</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5151231,-12.979414</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5150799,-12.9795251</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5008342,-13.0008336</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4377662,-12.9744975</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4873679,-12.9501235</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4876373,-12.9504528</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3788817,-12.9331025</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4064009,-12.9603716</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4063163,-12.9603932</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4062631,-12.9624765</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4069393,-12.9595993</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4068799,-12.9596478</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4606352,-12.9145968</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4440779,-12.9788168</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3529815,-12.9000595</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3440684,-12.9053982</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.2947878,-12.8612221</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.442641,-12.9272443</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4508352,-12.9925183</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itaberaba, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.3080648,-12.514808</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Boquira, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-42.7161408,-12.8056871</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Boquira, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-42.7233412,-12.8167284</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4546958,-12.9866378</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3527319,-12.8926761</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3528321,-12.8926675</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4745175,-12.9678125</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.2643343,-14.792694</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4390648,-12.9876043</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Feira de Santana, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.9481556,-12.2536277</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4491594,-12.9337078</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4672614,-12.9861441</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4671888,-12.9861453</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4670033,-12.985987</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4676292,-12.986408</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4382269,-12.9849583</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3558756,-12.9286461</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4665246,-13.0004803</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4663564,-13.0007236</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4664583,-13.0005206</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Cotia, São Paulo</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-46.9266424,-23.6164901</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5179837,-13.001836</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4791585,-12.9825541</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4392996,-12.9888677</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.277985,-14.7921993</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Teixeira de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.72968142,-17.55560309</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4377649,-12.9870593</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4813047,-12.9554798</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4724844,-12.9438782</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4784568,-12.8766093</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5131269,-12.9988361</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3261864,-12.8897508</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5131317,-12.998847</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.326211,-12.8897102</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3665458,-12.915173</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Camaçari, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3179559,-12.7154584</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3844531,-12.9468533</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4326351,-12.9695282</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3664243,-12.9152375</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Serrinha, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.0131332,-11.6614104</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4920786,-12.9891605</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Catu, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3899013,-12.369729</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.2995749,-12.890998</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.2995517,-12.8913725</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4623346,-13.0012921</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4329403,-12.9651945</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4618386,-12.9988022</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Feira de Santana, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.9792559,-12.2436799</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3832031,-12.9004144</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3832244,-12.9004486</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3832244,-12.9004486</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Camaçari, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3345804,-12.7052238</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4497795,-12.9078769</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4721713,-12.964995</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.385209,-12.927155</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Simões Filho, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3997936,-12.7858601</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Macapá, Amapá</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-51.0621614,0.0249437</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4100244,-12.8895831</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Eunápolis, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.568664,-16.3705444</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3091499,-12.8798387</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.484595,-13.0087143</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4845484,-13.0088077</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5050399,-12.9671205</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Barreiras, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-44.9745012,-12.1518957</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3559837,-12.9256675</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4918939,-12.9703498</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5094747,-12.9250946</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Camaçari, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.2817407,-12.8466491</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4677423,-13.0100901</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.2733529,-14.8145504</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4439379,-12.9837924</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5037299,-12.9369545</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.2824375,-14.7942051</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.2826077,-14.7945167</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4892129,-13.0070384</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4375342,-12.9761359</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4781232,-12.8845658</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4387059,-12.9848136</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.50287454206357,-13.00162455999572</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3650086,-12.9400045</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4094951,-12.9647608</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4388815,-12.9715392</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4829661,-12.9847119</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itambé, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.6230781,-15.2383839</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Juazeiro, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.5044998,-9.4116141</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5034114,-12.9224697</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4613836,-13.0011516</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4614373,-13.0013485</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4616671,-13.0009978</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4868632,-12.9995443</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3396034,-12.886184</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4606872,-13.0078597</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4375473,-12.9760576</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Dom Macedo Costa, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.1920408,-12.9029353</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Feira de Santana, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.897281,-12.3105333</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Juazeiro, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.4991802,-9.4212113</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4289545,-12.9213786</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4758702,-12.8615822</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4656173,-13.0091164</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4791508,-12.9825553</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4792451,-12.9825294</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4791921,-12.9825315</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.2988507,-12.8947086</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4835059,-12.9399221</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4648435,-12.9972877</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Camaçari, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3196661,-12.7131512</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.284622,-14.7982936</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ilhéus, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.0451837,-14.7959476</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lages, Santa Catarina</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-50.29143294324194,-27.77774663644636</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3855055,-12.9421521</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Carapicuíba, São Paulo</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-46.844087,-23.5271957</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Feira de Santana, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.976749,-12.2770111</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Feira de Santana, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.9768072,-12.277036</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Feira de Santana, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.9768053,-12.2770397</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Feira de Santana, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.9768074,-12.2770334</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Feira de Santana, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.9768115,-12.2770285</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.40776299130023,-12.95072444715812</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4874002,-12.9501037</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.43998193744424,-12.97452741769419</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.43999233100418,-12.97463751399235</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.43999601904157,-12.97441019677834</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Joinville, Santa Catarina</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-48.86700955224118,-26.26380686650636</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.2669154,-14.7896804</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.47305503641218,-12.83249255009737</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Alagoinhas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3997438,-12.1467912</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4791485,-12.9825355</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5153732,-12.9807976</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.47312014289854,-12.83251309138294</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4962496,-12.9920493</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3029025,-12.8913546</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3029025,-12.8913546</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.43982142399851,-12.97449456063376</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Feira de Santana, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.93151878382911,-12.25131791086146</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.43988386917714,-12.97450415791289</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.31145810898236,-12.88493270986982</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3114751242458,-12.88489021362074</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Macapá, Amapá</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-51.0638967,0.0230266</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3883936,-12.8999443</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3204531,-12.894747</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4440997,-12.9955648</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.444365557006435,-12.995326271117497</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Campos dos Goytacazes, Rio de Janeiro</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-41.2987258,-21.8143129</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Biquinhas, Minas Gerais</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-45.503448,-18.782163</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.412925,-12.8942595</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.49397049814401,-12.96968979073052</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.49405222675627,-12.96972303243623</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ilhéus, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.0476731,-14.7824041</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Feira de Santana, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.93793709,-12.25661994</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4463625,-12.9921613</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4463599,-12.9921857</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Belo Horizonte, Minas Gerais</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-43.9073814,-19.9423409</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Passos, Minas Gerais</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-46.6199925,-20.7045539</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4595424,-12.9866974</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.44456491064135,-12.99521579874027</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.2778117,-14.7885735</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.2773383,-14.7889022</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Mairi, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.1483749039845,-11.71286998317736</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.45127135518794,-12.99821182620991</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.46224100332564,-12.99001063687074</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Camaçari, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.2945001,-12.7306076</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4420838,-12.97907</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5207911,-12.9938073</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ilhéus, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.0266588,-14.8107187</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ilhéus, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.0266592,-14.8107208</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ilhéus, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.0266522,-14.8106972</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4572932,-12.9014756</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.44056372534338,-12.98010121566521</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Feira de Santana, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.96800839345806,-12.24553104491182</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5150898,-12.9790793</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5051419,-12.9347338</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.5049344,-12.9347119</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Vitória da Conquista, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.8323676,-14.8518651</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Vitória da Conquista, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.8323614,-14.8518643</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Vitória da Conquista, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.8323604,-14.8518622</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4917833,-12.9660566</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Vitória da Conquista, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.8323598,-14.8518615</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Vitória da Conquista, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.8323621,-14.8518644</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Vitória da Conquista, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.8323787,-14.8518621</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4644932,-12.8404215</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4770254,-12.8580648</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4620681,-12.9997503</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ilhéus, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.0267172,-14.8107659</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ilhéus, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.0267569,-14.8108692</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.3896604,-12.9549702</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Vitória da Conquista, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.8323811,-14.8518876</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>São Sebastião do Passé, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4931775,-12.5198101</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Bauru, São Paulo</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-49.0605081,-22.3466122</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Bauru, São Paulo</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-49.0605334,-22.3465414</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Teixeira de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.759976,-17.5352215</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.486044,-12.9715531</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Lauro de Freitas, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.2988663,-12.8946929</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4881132,-12.9655152</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Feira de Santana, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.968291,-12.2730878</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.352778,-12.9057386</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.2779513,-14.7887118</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.2775304,-14.7888252</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.2774433,-14.7888562</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4613785,-12.9987061</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.425957,-12.9713256</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.52198578420889,-13.00075577573199</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ilhéus, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.178103,-14.7969004</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.4887042,-13.0065022</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Salvador, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-38.37449815127847,-12.94840395917459</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Vitória da Conquista, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.8323693,-14.8518711</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Vitória da Conquista, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.8323745,-14.8518644</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Vitória da Conquista, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.8323754,-14.8518648</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Vitória da Conquista, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-40.8323491,-14.8518862</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Itabuna, Bahia</name>
+            <open>1</open>
+            <Point>
+                <coordinates>-39.2772929,-14.7808384</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>

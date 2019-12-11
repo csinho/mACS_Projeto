@@ -1,0 +1,190 @@
+#{extends 'main.html' /} #{set title:'Consultas' /} #{set 'moreScripts'/}
+<script src="@{'/public/javascripts/services/formService.js'}" type="text/javascript" charset="UTF-8"></script>
+<script src="@{'/public/javascripts/directives/listForms.directive.js'}" type="text/javascript" charset="UTF-8"></script>
+
+<script src="@{'/public/javascripts/controllers/form.controller.js'}" type="text/javascript" charset="UTF-8"></script>
+<style>
+  .full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
+</style>
+<div ng-controller="FormController as ctrl" ng-init="ctrl.activate()">
+    <div class="container" style="width: auto !important">
+        <div id="wrapper" style="padding: 20px">            
+            <div class="panel panel-default" ng-if="ctrl.view !== 'detail'">
+                <div class="panel-heading" style="font-size: 20px;">{{ctrl.windowTitle}}</div>
+                <div class="panel-body">
+                    <div ng-if="ctrl.view === 'search'">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <label>Tipo: </label>
+                                <select ng-model="ctrl.formTemplate" class="form-control" required="required" ng-options="formTemplate as formTemplate.desc for formTemplate in ctrl.formTemplates"
+                                    ng-change="ctrl.formTemplateTypeChanged()">
+                                        <option value="">Selecione</option>
+                                    </select>
+                            </div>
+                            <div class="col-md-1">
+                                <label>Versão</label>
+                                <input ng-model="ctrl.formVersion" disabled="disabled" class="form-control" required="required"></input>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Cadastrado entre</label>
+                                <div class="row">
+                                    <div class="col-md-5" style="padding:0 5px 0 5px">
+                                        <!--<input style="padding:2px" ng-model="ctrl.formCreatedAtFrom" type="date" class="form-control" required="required">-->                                       
+                                        <p class="input-group ">
+                                            <input type="text" 
+                                            alt-input-formats="altInputFormats" 
+                                            placeholder="dd/mm/aaaa",                                                                                       
+                                            class="form-control validate-date"
+                                            ng-pattern="/^(0[1-9]|[12][0-9]|3[01])\/([1-9]|0[1-9]|1[012])\/(20\d{2})$/"                                                                             
+                                            uib-datepicker-popup="{{format}}" 
+                                            ng-model="ctrl.formCreatedAtFrom" 
+                                            is-open="popupCreatedAtFromOpen.opened" 
+                                            datepicker-options="dateOptions"                                             
+                                            close-text="Fechar" 
+                                            current-text="Hoje" 
+                                            clear-text="Limpar"                                            
+                                            alt-input-formats="altInputFormats" />
+                                            
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default" ng-click="openCreatedAtFrom()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-1" style="padding:0 5px 0 5px">
+                                        e
+                                    </div>
+                                    <div class="col-md-5" style="padding:0 5px 0 5px">
+                                        <!--<input style="padding:2px" ng-model="ctrl.formCreatedAtTo" type="date" class="form-control" required="required">-->
+
+                                        <p class="input-group">
+                                            <input type="text" 
+                                            alt-input-formats="altInputFormats" 
+                                            placeholder="dd/mm/aaaa",                                                                                       
+                                            class="form-control validate-date" 
+                                            ng-required="true"
+                                            ng-pattern="/^(0[1-9]|[12][0-9]|3[01])\/([1-9]|0[1-9]|1[012])\/(20\d{2})$/"                                                                                      
+                                            uib-datepicker-popup="{{format}}" 
+                                            ng-model="ctrl.formCreatedAtTo" 
+                                            is-open="popupCreatedAtToOpen.opened" 
+                                            datepicker-options="dateOptions"                                              
+                                            close-text="Fechar" 
+                                            current-text="Hoje" 
+                                            clear-text="Limpar"                                            
+                                             />                                            
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default" ng-click="openCreatedAtTo()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Enviado entre </label>
+                                <div class="row">
+                                    <div class="col-md-5" style="padding:0 5px 0 5px">
+                                        <!--<input style="padding:2px" ng-model="ctrl.formSyncedAtFrom" type="date" class="form-control" required="required">-->
+
+                                        <p class="input-group">
+                                            <input type="text" 
+                                            alt-input-formats="altInputFormats" 
+                                            placeholder="dd/mm/aaaa",                                                                                       
+                                            class="form-control validate-date" 
+                                            ng-required="true"
+                                            ng-pattern="/^(0[1-9]|[12][0-9]|3[01])\/([1-9]|0[1-9]|1[012])\/(20\d{2})$/"                                                                                 
+                                            uib-datepicker-popup="{{format}}" 
+                                            ng-model="ctrl.formSyncedAtFrom" 
+                                            is-open="popupFormSyncedAtFromOpen.opened" 
+                                            datepicker-options="dateOptions"                                            
+                                            close-text="Fechar" 
+                                            current-text="Hoje" 
+                                            clear-text="Limpar"                                            
+                                             />                                            
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default" ng-click="openFormSyncedAtFrom()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                            </span>
+                                    </div>
+                                    <div class="col-md-1" style="padding:0 5px 0 5px">
+                                        e
+                                    </div>
+                                    <div class="col-md-5" style="padding:0 5px 0 5px">
+                                        <!--<input style="padding:2px" ng-model="ctrl.formSyncedAtTo" type="date" class="form-control" required="required">-->
+
+                                        <p class="input-group">
+                                            <input type="text" 
+                                            alt-input-formats="altInputFormats" 
+                                            placeholder="dd/mm/aaaa",                                                                                       
+                                            class="form-control validate-date" 
+                                            ng-required="true"
+                                            ng-pattern="/^(0[1-9]|[12][0-9]|3[01])\/([1-9]|0[1-9]|1[012])\/(20\d{2})$/"                                                                                      
+                                            uib-datepicker-popup="{{format}}" 
+                                            ng-model="ctrl.formSyncedAtTo" 
+                                            is-open="popupFormSyncedAtToOpen.opened" 
+                                            datepicker-options="dateOptions"                                            
+                                            close-text="Fechar" 
+                                            current-text="Hoje" 
+                                            clear-text="Limpar"                                            
+                                             />                                            
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default" ng-click="openFormSyncedAtTo()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        #{include 'Forms/form.filter.html' /} 
+                        #{include 'Forms/form.authoring.html' /} 
+                        #{include 'Forms/form.filtersApplied.html' /}
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                              <button class="btn btn-primary" ng-disabled="ctrl.formTemplate == null" ng-click="ctrl.search()">Consultar</button>
+                            </div>
+                             <div class="col-md-3">   
+                              <div class="form-group row">
+                               <div class="col-md-6">  
+                                   <label style="line-height:15px" class="pull-right">Listar versões antigas?</label>                                                                               
+                              </div>
+                              <div class="col-md-6">   
+                                 <div class="input-group">                                  
+                                   <label class="switch" >
+                                     <input class="switch-input" type="checkbox" ng-model="ctrl.listOldRevisions" />                                  
+                                     <span class="switch-label" data-on="Sim" data-off="Não"></span>
+                                     <span class="switch-handle"></span>
+                                   </label> 
+                                 </div>                               
+                              </div>
+                             </div>
+                            </div>
+                        </div>
+                    </div>                   
+                    <list-Forms is-selectable="ctrl.enabledExport" on-detail-call-back="ctrl.showFormDetailsByFormId" ng-if="ctrl.view !== 'search'" class="list-Forms" ng-model="ctrl.results" > </list-Forms>
+                    <div style="padding:0 30px 0 30px" class="row" ng-if="ctrl.view === 'list'">
+                        <div class="col">
+                            <div class="pull-right">
+                              <button class="btn btn-primary" ng-click="ctrl.back()">❮ Voltar</button>
+                              <button class="btn btn-primary" ng-if="ctrl.enabledExport === true" ng-click="ctrl.exportSelected()">Exportar selecionados ({{ctrl.countSelectedForms()}})</button>
+                              <button class="btn btn-warning" ng-if="ctrl.enabledExport === true" ng-click="ctrl.exportAll()">Exportar todos ({{ctrl.paginator.total}})</button>
+                              </div>
+                            <div class="pull-left">                       
+                                <button class="btn btn-info" ng-if="ctrl.enabledExport === true" ng-click="ctrl.toggleSelectAllVisible()">Marcar/desmarcar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding:0 30px 0 30px" class="row">
+                        <div class="col">
+                            <paginacao ng-if="ctrl.view === 'list'" paginador="ctrl.paginator"></paginacao> 
+                        </div>  
+                    </div>                                  
+                </div>
+            </div>
+        </div>
+    </div>
+    #{include 'Forms/form.data.html' /}
+</div>

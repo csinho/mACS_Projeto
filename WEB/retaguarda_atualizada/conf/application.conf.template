@@ -1,0 +1,50 @@
+######## GLOBAL ########
+
+application.name=cacamosquito
+application.version=1.0.0
+application.secret=HOAUsqL5Qas5FYiGB7DEDrLpp7bGZEm13dXnW8usB3ypOhyAI96GyjvkD0k0bLax
+application.log=DEBUG
+date.format=dd/MM/yyyy
+jpa.dialect=org.hibernate.dialect.PostgreSQLDialect
+attachments.path=data/attachments
+
+application.baseUrl=http://localhost:9000/
+mail.smtp.host=envio.ba.gov.br
+mail.debug=true
+
+java.source=1.7
+
+######## DESENVOLVIMENTO ########
+
+application.mode=dev
+application.ambiente=desenvolvimento
+db=postgres://postgres:prodeb@localhost/cacamosquito_development
+jpa.ddl=update
+jpa.debugSQL=true
+hibernate.use_sql_comments=true
+
+######## HOMOLOGAÇÃO ########
+######## play war cacamosquito -o ROOT --%homologa --zip   ######## HOMOLOGAÇÃO ########
+
+%homologa.application.mode=prod
+%homologa.application.ambiente=homologacao
+%homologa.db=postgres://usuario:password@ip/database_name
+%homologa.jpa.ddl=none
+%homologa.jpa.debugSQL=false
+%homologa.http.port=9000
+%homologa.hibernate.use_sql_comments=false
+%homologa.application.baseUrl=http://homologa.nomedaaplicacao.prodeb.ba.gov.br/
+%homologa.mail.debug=false
+
+######## PRODUÇÃO ########
+######## play war cacamosquito -o ROOT --%production --zip ######## PRODUÇÃO    ########
+
+%production.application.mode=prod
+%production.application.ambiente=producao
+%production.db=postgres://usuario:password@ip/database_name
+%production.jpa.ddl=none
+%production.jpa.debugSQL=false
+%production.http.port=9000
+%production.hibernate.use_sql_comments=false
+%production.application.baseUrl=http://nomedaaplicacao.prodeb.ba.gov.br/
+%production.mail.debug=false

@@ -1,0 +1,139 @@
+<div class="panel panel-default" ng-cloak>
+  <div class="panel-heading" style="font-size: 20px;">Cadastro</div>
+  <div class="panel-body" style="margin-top: 35px;">
+    <form role="form">
+      <div class="col-lg-6">
+        <div class="form-group row">
+          <label for="eventTitle" class="col-sm-4 control-label">Título: </label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control input-md" id="eventTitle" 
+            ng-model="eventCtrl.event.title" 
+            required>
+          </div>
+        </div>
+        
+        <div class="form-group row">
+          <label for="eventDescription" class="col-sm-4 control-label">Descrição: </label>
+          <div class="col-sm-8">
+            <textarea class="form-control input-md" id="eventDescription" 
+            ng-model="eventCtrl.event.description" rows="5" style="resize:none;" required></textarea>
+          </div>
+        </div>
+        
+        <div class="form-group row">
+          <label for="eventDate" class="col-sm-4 control-label">Data: </label>
+          <div class="col-sm-8">
+            <p class="input-group ">
+              <input type="text" 
+                placeholder="dd/mm/aaaa"
+                class="form-control"
+                uib-datepicker-popup="{{format}}"
+                ng-model="eventCtrl.event.date"
+                is-open="datePopupOpened"
+                datepicker-options="dateOptions"
+                close-text="Fechar"
+                current-text="Hoje"
+                clear-text="Limpar"
+                required
+              />              
+              
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openDatePopup()">
+                  <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+              </span>
+            </p>
+          </div>
+        </div>
+        
+        
+        <div class="form-group row">
+          <label for="eventTime" class="col-sm-4 control-label">Hora: </label>
+          <div class="col-sm-8">
+            <div uib-timepicker ng-model="eventCtrl.event.date" ng-change="changed()" show-meridian="false"></div>
+          </div>
+        </div>
+
+        <div class="panel panel-default" ng-cloak>
+          <div class="panel-heading" style="font-size: 15px;">Público alvo</div>
+          <div class="panel-body" style="margin-top: 35px;">
+            <!-- Target Audience -->
+            <div class="form-group row">
+              <label for="municipio" class="col-sm-4 control-label">Município </label>
+              <div class="col-sm-8" angucomplete-alt id="municipio"
+                  remote-url="/municipios/search?term="
+                  title-field="nome,estado.sigla"
+                  ng-model="eventCtrl.event.municipio"
+                  pause="100"
+                  text-searching="Pesquisando..."
+                  text-no-results="Nenhum registro encontrado."
+                  minlength="3" 
+                  auto-match="true"
+                  input-class="form-control input-md"
+                  match-class="highlight" 
+                  placeholder="Digite o município" 
+                  not-input-changed="eventCtrl.changingMunicipio"
+                  >
+              </div>
+            </div>            
+            <div class="form-group row" ng-if="eventCtrl.showingUnidadeSaude()">
+              <label for="unidadeSaude" class="col-sm-4 control-label">Unidade de Saúde: </label>
+              <div class="col-sm-8" angucomplete-alt id="unidadeSaude"
+                  remote-url="/unidadesaude/search/{{eventCtrl.event.municipio.id}}/?term="
+                  title-field="nomeFantasia"
+                  ng-model="eventCtrl.event.unidadeSaude"
+                  pause="100"
+                  text-searching="Pesquisando..."
+                  text-no-results="Nenhum registro encontrado."
+                  minlength="3" 
+                  auto-match="true"
+                  input-class="form-control input-md"
+                  match-class="highlight" 
+                  placeholder="Digite a unidade de saúde" 
+                  selected-fn="eventCtrl.selectingUnidadeSaude"
+                  input-changed="eventCtrl.changingUnidadeSaude">
+              </div>
+            </div>
+            
+            <div class="form-group row" ng-if="eventCtrl.showingEquipe()">
+              <label for="equipe" class="col-sm-4 control-label">Equipe: </label>
+              <div class="col-sm-8">
+                <select id="equipe" 
+                    class="input-md form-control" ng-model="eventCtrl.event.equipe"
+                    ng-options="equipe as equipe.description for equipe in eventCtrl.equipes track by equipe.id"
+                    ng-change="eventCtrl.changingEquipe()">
+                  <option value="">Selecione</option>
+                </select>
+              </div>
+            </div>
+            <!-- End of target audience -->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="eventImg" class="col-sm-4 control-label">Imagem: </label>
+          <div class="col-sm-8">
+            <input type="file" id="fileInput" />
+          </div>
+        </div>
+        
+        <div class="form-group row">
+          <span><strong>Tamanho recomendado: </strong>(640 x 360)</span>
+          <div ng-show="eventCtrl.event.image">
+            <img-crop image="eventCtrl.loadedImg" area-type="rectangle" aspect-ratio="1.7777" result-image="eventCtrl.event.image" result-image-size='{w: 640,h: 360}' init-max-area="true" canvas-scalemode="full-width"></img-crop>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="form-group row"><img style="max-width:100%;" ng-src="{{eventCtrl.event.image}}" ng-if="eventCtrl.event.image"/></div>
+      </div>
+
+
+      <div class="row col-lg-12">
+        <button id="cancelar" type="reset" class="btn btn-default pull-right" ng-click="eventCtrl.cancelar()">Cancelar</button>
+        <button type="submit" class="btn btn-success pull-right" ng-click="eventCtrl.salvar()"
+          style="margin-right: 10px;">{{eventCtrl.event.id ? 'Concluir edição' : 'Salvar'}}</button>
+      </div>
+    </form>
+  </div>
+</div>

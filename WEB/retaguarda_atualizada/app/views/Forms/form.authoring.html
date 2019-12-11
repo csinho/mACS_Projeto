@@ -1,0 +1,66 @@
+<!-- list filters -->
+<div class="panel panel-default">
+    <div class="panel-heading" style="font-size: 20px;">Região/usuário</div>
+    <div class="panel-body">
+        <div class="form-group row">
+            <div class="col-md-4">
+                <label for="city" class="control-label">Município </label>
+                <div angucomplete-alt id="city" ng-if="!ctrl.disableCityFilter"
+                      remote-url="/municipios/search?term="
+                      title-field="nome,estado.sigla"
+                      ng-model="ctrl.city"
+                      pause="100"
+                      text-searching="Pesquisando..."
+                      text-no-results="Nenhum registro encontrado."
+                      minlength="3" 
+                      auto-match="true"                      
+                      input-class="form-control input-md"
+                      match-class="highlight" 
+                      placeholder="Digite o município" 
+                      selected-fn="ctrl.cityChanged"
+                      
+                      >                      
+                </div>
+                <input style="padding:2px" ng-if="ctrl.disableCityFilter" disabled="disabled"  ng-model="ctrl.city.nome" class="form-control"></input>
+            </div>
+            <div class="col-md-4" >               
+                    <label for="unidadeSaude" class="control-label">Unidade de Saúde:</label>
+                    <div angucomplete-alt id="unidadeSaude" ng-if="!ctrl.disableUnityFilter"
+                        remote-url="/unidadesaude/search{{ctrl.cityUrlParam}}?term="
+                        title-field="nomeFantasia"
+                        ng-model="ctrl.unity"
+                        pause="100"
+                        text-searching="Pesquisando..."
+                        text-no-results="Nenhum registro encontrado."
+                        minlength="1" 
+                        auto-match="true"                       
+                        input-class="form-control input-md"
+                        match-class="highlight" 
+                        placeholder="Digite a unidade de saúde"                         
+                        selected-fn="ctrl.unityChanged"  
+                                             
+                        >
+                    </div>
+                    <input style="padding:2px" ng-if="ctrl.disableUnityFilter" disabled="disabled" ng-model="ctrl.unity.nomeFantasia" class="form-control"></input>
+            </div>
+            <div class="col-md-4">
+                    <label for="user" class="control-label">Agente:</label>
+                    <div angucomplete-alt id="user"
+                        remote-url="{{ctrl.searchUserPath}}"                       
+                        title-field="nome"
+                        ng-model="ctrl.deviceUser"
+                        pause="100"
+                        text-searching="Pesquisando..."
+                        text-no-results="Nenhum registro encontrado."
+                        minlength="1" 
+                        auto-match="true"                       
+                        input-class="form-control input-md"
+                        match-class="highlight" 
+                        placeholder="Digite o nome do agente"                       
+                                              
+                        >
+                    </div>
+            </div>           
+        </div>
+    </div>
+</div>

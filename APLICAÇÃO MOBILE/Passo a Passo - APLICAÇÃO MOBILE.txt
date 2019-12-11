@@ -1,0 +1,31 @@
+ - Instale a versão 4.9.x do node js
+ - Rode o comando npm uninstall -g cordova ionic
+ - Rode o comando npm i -g cordova@6 ionic@2
+
+
+
+1 - Descompacte o fonte do aplicativo (o que você teve acesso no FTP da DMA quando entrou no projeto)
+
+2 - Abra o arquivo package.json que se encontra na raiz da pasta do projeto
+
+3 - Procure a linha https://github.com/sarriaroman/FabricPlugin#1.1.1 e remova o #1.1.1 
+	ficando somente https://github.com/sarriaroman/FabricPlugin
+
+4 - Procure a linha cordova-plugin-camera@~2.3.1 e altere para cordova-plugin-camera@~4.1.0
+
+5 - Abra o arquivo config.xml que se encontra na raiz da pasta do projeto e procure a linha 
+	<plugin name="cordova-plugin-camera" spec="~2.3.1"/> e altere para <plugin name="cordova-plugin-camera" spec="~4.1.0"/>
+
+6 - Na raiz da pasta do projeto rode o comando pelo terminal npm install.
+
+7 - Rode o comando cordova platform remove android
+
+8 - Rode o comando cordova platform add android@6
+
+9 - Rode o comando ionic resources android
+
+10 - Depois abra o aquivo platforms/android/project.properties e altere target=android-26 para target=android-28
+
+11 - Rode o comando ionic build android para gerar o arquivo apk
+
+12 - Rode o comando ionic run android para rodar o aplicativo

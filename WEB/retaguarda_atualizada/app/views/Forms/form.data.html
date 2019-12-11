@@ -1,0 +1,104 @@
+<!-- modal show data form  -->
+<div id="formData" tabindex="-1"  ng-class="ctrl.view == 'detail'? 'show-modal fade in': 'fade'">
+    <div class="modal-dialog" style="width:90%; margin-top:0px;" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button ng-click="ctrl.closeDetail()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <button class="print-form pull-right" ng-click="ctrl.print()" type="button" class="pull-right" aria-label="Imprimir">
+                    <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+				        </button>
+                 <select ng-if="ctrl.formRevisions && ctrl.formRevisions.length > 1" 
+                    class="form-control pull-right"
+                    style="width:20%; height:28px"
+                    ng-model="ctrl.formRevision" 
+                    ng-change="ctrl.switchToFormRevision()"
+                    ng-options="revision.createdAtFormatted for revision in ctrl.formRevisions">                   
+                    <option value="">Versões</option>								
+                </select> 
+                <h4 class="modal-title">{{ctrl.formSet.form.desc}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <label>Nome do profissional: </label>
+                                <input class="form-control" type="text" disabled="disabled" name="nomeProfissional" ng-model="ctrl.formSet.deviceUser.nome">
+                            </div>
+                            <div class="col-md-4">
+                                <label>Cartão SUS do profissional: </label>
+                                <input class="form-control" type="text" disabled="disabled" name="nomeProfissional" ng-model="ctrl.formSet.deviceUser.userData.cns">
+                            </div>
+                            <div class="col-md-4">
+                                <label>CNES Unidade: </label>
+                                <input class="form-control" type="text" disabled="disabled" name="nomeProfissional" ng-model="ctrl.formSet.deviceUser.userData.unidadeSaude.cnes">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <label>Equipe: </label>
+                                <input class="form-control" type="text" disabled="disabled" name="nomeProfissional" ng-model="ctrl.formSet.deviceUser.userData.equipe.codigo">
+                            </div>
+                            <div class="col-md-2">
+                                <label>Microárea: </label>
+                                <input class="form-control" type="text" disabled="disabled" name="nomeProfissional" ng-model="ctrl.formSet.deviceUser.userData.microarea">
+                            </div>
+                            <div class="col-md-4">
+                                <label>Data de cadastro: </label>
+                                <input class="form-control" type="text" disabled="disabled" name="nomeProfissional" ng-model="ctrl.formSet.createdAt">
+                            </div>
+                            <div class="col-md-4">
+                                <label>Data de sincronização: </label>
+                                <input class="form-control" type="text" disabled="disabled" name="nomeProfissional" ng-model="ctrl.formSet.synchronizedAt">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+                <label>Dados do formulário: </label>
+                <table class="table table-striped table-bordered table-hover table-condensed" style="margin-top: 10px;">
+                    <tbody>
+                        <tr class="odd gradeX" ng-repeat="result in ctrl.formSet.formData">
+                            <td>{{::result.desc}}</td>
+                            <td >
+                                <div ng-switch on="result.exhibitionType">
+                                    <div ng-switch-when="data">
+                                        {{::result.valueDesc}}
+                                    </div>
+                                    <div ng-switch-when="formChildList">
+                                        <div ng-if="result.hasChild === false">
+                                            {{::result.valueDesc}}
+                                        </div>
+                                        <div ng-if="result.hasChild === true">
+                                            <list-Forms on-detail-call-back="ctrl.showFormDetailsByFormId" class="list-Forms" ng-model="result.childForms" essencial-view="true">
+                                            </list-Forms>
+                                        </div>
+                                    </div>
+                                    <div ng-switch-when="formReference">
+                                        <a href="#" ng-click="ctrl.showFormDetailsByFormDataRef(result)">Exibir {{result.desc}}</a>
+                                    </div>
+                                    <div ng-switch-when="locationMap">                                        
+                                        <a href="#" alt="Abrir no Google Maps" ng-click="ctrl.openMapUrl(result.value)">
+                                            <img ng-if="result.exhibitionType =='locationMap'" src="http://maps.googleapis.com/maps/api/staticmap?center={{result.value}}&zoom=10&size=400x100&sensor=false&markers={{result.value}}&key=AIzaSyDv-ZI1KzcM_OiWotQ-zqWraKsjheB0nKA&format=png8" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-right" ng-click="ctrl.closeDetail()" >Fechar</button>
+                <button class="print-form pull-right" ng-click="ctrl.print()" type="button" class="pull-right" aria-label="Imprimir">
+                    <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+				</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="ctrl.view == 'detail' && false" class="modal-backdrop fade in"></div>
+<!--  end modal show data form -->
